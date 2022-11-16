@@ -30,7 +30,6 @@ public class UserRepository {
         savedUser.setName(user.getName());
         savedUser.setPhone(user.getPhone());
         savedUser.setStatus(user.getStatus());
-        savedUser.setRole(user.getRole());
 
         return savedUser;
     }

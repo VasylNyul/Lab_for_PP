@@ -3,6 +3,7 @@ package lpnu.service.impl;
 import lpnu.dto.UserDTO;
 import lpnu.entity.User;
 import lpnu.entity.enums.Status;
+import lpnu.exception.ServiceException;
 import lpnu.mapper.UserMapper;
 import lpnu.repository.UserRepository;
 import lpnu.service.UserService;
@@ -40,6 +41,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO update(final UserDTO userDTO) {
+        if (userDTO.getId() == null) {
+            throw new ServiceException(400, "id is null");
+        }
         final User user = UserMapper.toEntity(userDTO);
 
         userRepository.update(user);
@@ -49,6 +53,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO findById(final Long id) {
+
         return UserMapper.toDTO(userRepository.findById(id));
     }
 }
