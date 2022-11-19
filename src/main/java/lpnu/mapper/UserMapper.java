@@ -9,7 +9,7 @@ public class UserMapper {
 
         userDTO.setId(user.getId());
         userDTO.setName(user.getName());
-        userDTO.setPhone(user.getPhone());
+        userDTO.setEmail(user.getEmail());
         userDTO.setCoffeeBean(user.getCoffeeBean());
         userDTO.setStatus(user.getStatus());
 
@@ -21,7 +21,7 @@ public class UserMapper {
 
         user.setId(userDTO.getId());
         user.setName(userDTO.getName());
-        user.setPhone(userDTO.getPhone());
+        user.setEmail(userDTO.getEmail());
         user.setCoffeeBean(userDTO.getCoffeeBean());
         user.setStatus(userDTO.getStatus());
 

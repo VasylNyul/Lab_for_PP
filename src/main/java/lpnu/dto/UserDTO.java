@@ -1,5 +1,6 @@
 package lpnu.dto;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
 import lpnu.entity.enums.Status;
@@ -9,15 +10,15 @@ public class UserDTO {
     private Long id;
     @NotNull
     private String name;
-    @NotNull
-    private String phone;
+    @Email
+    private String email;
     private Status status;
     private int coffeeBean;
 
-    public UserDTO(final Long id, final String name, final String phone, final Status status, final int coffeeBean) {
+    public UserDTO(final Long id, final String name, final String email, final Status status, final int coffeeBean) {
         this.id = id;
         this.name = name;
-        this.phone = phone;
+        this.email = email;
         this.status = status;
         this.coffeeBean = coffeeBean;
     }
@@ -41,12 +42,12 @@ public class UserDTO {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhone(final String phone) {
-        this.phone = phone;
+    public void setEmail(final String email) {
+        this.email = email;
     }
 
     public Status getStatus() {

@@ -2,7 +2,6 @@ package lpnu.resource;
 
 import lpnu.dto.UserDTO;
 import lpnu.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,6 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class UserResource {
 
-    @Autowired
     private UserService userService;
 
     @GetMapping("/users")

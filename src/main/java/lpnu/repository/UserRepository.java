@@ -28,7 +28,7 @@ public class UserRepository {
         final User savedUser = findById(user.getId());
 
         savedUser.setName(user.getName());
-        savedUser.setPhone(user.getPhone());
+        savedUser.setEmail(user.getEmail());
         savedUser.setStatus(user.getStatus());
 
         return savedUser;
