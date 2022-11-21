@@ -1,6 +1,10 @@
 package lpnu.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lpnu.entity.enums.Status;
+
 
 public class User {
 

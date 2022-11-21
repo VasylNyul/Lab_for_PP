@@ -1,7 +1,7 @@
 package lpnu.resource;
 
 import lpnu.dto.DrinkDTO;
-import lpnu.service.DrinkService;
+import lpnu.service.impl.DrinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

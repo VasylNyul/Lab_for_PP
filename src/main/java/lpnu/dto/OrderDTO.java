@@ -1,5 +1,4 @@
-package lpnu.entity;
-
+package lpnu.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,13 +7,15 @@ import lpnu.entity.enums.OrderStatus;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class OrderDTO {
     private Long id;
+    private Long userId;
+    private List<OrderDetailsDTO> orderDetails;
     private LocalDateTime orderDateTime;
-    private User user;
-    private List<OrderDetails> orderDetails;
     private OrderStatus orderStatus;
+    // location
 }
