@@ -8,10 +8,12 @@ import lpnu.mapper.UserMapper;
 import lpnu.repository.UserRepository;
 import lpnu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired

@@ -12,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 public class UserResource {
-
     @Autowired
     private UserService userService;
 
