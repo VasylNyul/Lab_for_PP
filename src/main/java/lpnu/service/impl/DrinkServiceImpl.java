@@ -11,11 +11,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 @Service
 public class DrinkServiceImpl implements DrinkService {
 
     @Autowired
     private DrinkRepository drinkRepository;
+
+    public DrinkServiceImpl(final DrinkRepository drinkRepository) {
+        this.drinkRepository = drinkRepository;
+    }
 
     @Override
     public List<DrinkDTO> getAllDrinks() {

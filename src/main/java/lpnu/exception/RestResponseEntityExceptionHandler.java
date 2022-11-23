@@ -10,21 +10,20 @@ import org.springframework.web.context.request.WebRequest;
 
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler {
-    @ExceptionHandler(value = ServiceException.class )
+    @ExceptionHandler(value = ServiceException.class)
     public ResponseEntity<Object> handleServiceException(final ServiceException ex, final WebRequest request) {
         return ResponseEntity.status(HttpStatus.valueOf(ex.getCode()))
                 .body(new ServiceExceptionDTO(ex));
     }
 
-    @ExceptionHandler(value = IllegalArgumentException.class )
+    @ExceptionHandler(value = IllegalArgumentException.class)
     public ResponseEntity<Object> handleServiceException(final IllegalArgumentException ex, final WebRequest request) {
         return ResponseEntity.status(HttpStatus.valueOf(HttpStatus.BAD_REQUEST.value()))
                 .body(new ServiceExceptionDTO(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), null));
     }
 
 
-
-    @ExceptionHandler(value = MethodArgumentNotValidException.class )
+    @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleServiceException(final MethodArgumentNotValidException ex) {
 
         final String messages = ex.getBindingResult().getAllErrors().stream()

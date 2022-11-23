@@ -1,16 +1,19 @@
 package lpnu.repository;
 
+import lpnu.annotation.NotEmptyList;
 import lpnu.entity.Drink;
 import lpnu.exception.ServiceException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class DrinkRepository {
     private final List<Drink> drinks = new ArrayList<>();
     private long id = 1;
 
+    @NotEmptyList
     public List<Drink> getAllDrinks() {
         return new ArrayList<>(drinks);
     }

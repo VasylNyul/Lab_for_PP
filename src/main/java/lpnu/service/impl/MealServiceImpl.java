@@ -19,6 +19,11 @@ public class MealServiceImpl implements MealService {
     @Autowired
     private MealRepository mealRepository;
 
+
+    public MealServiceImpl(final MealRepository mealRepository) {
+        this.mealRepository = mealRepository;
+    }
+
     @Override
     public List<MealDTO> getAllMeals() {
         return mealRepository.getAllMeals().stream()

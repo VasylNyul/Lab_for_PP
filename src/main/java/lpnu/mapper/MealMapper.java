@@ -5,7 +5,7 @@ import lpnu.entity.Meal;
 
 public class MealMapper {
 
-    public static MealDTO toDTO(final Meal meal){
+    public static MealDTO toDTO(final Meal meal) {
         final MealDTO mealDTO = new MealDTO();
 
 
@@ -17,7 +17,7 @@ public class MealMapper {
         return mealDTO;
     }
 
-    public static Meal toEntity(final MealDTO mealDTO){
+    public static Meal toEntity(final MealDTO mealDTO) {
         final Meal meal = new Meal();
 
         meal.setId(mealDTO.getId());

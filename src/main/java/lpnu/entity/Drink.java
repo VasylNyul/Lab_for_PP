@@ -5,14 +5,14 @@ public class Drink {
     private Long id;
     private String name;
 
-    private int price;
+    private Integer price;
 
-    private int milliliters;
+    private Integer milliliters;
 
     public Drink() {
     }
 
-    public Drink(final Long id, final String name, final int price, final int milliliters) {
+    public Drink(final Long id, final String name, final Integer price, final Integer milliliters) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -39,7 +39,7 @@ public class Drink {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(final Integer price) {
         this.price = price;
     }
 
@@ -47,7 +47,7 @@ public class Drink {
         return milliliters;
     }
 
-    public void setMilliliters(int milliliters) {
+    public void setMilliliters(final Integer milliliters) {
         this.milliliters = milliliters;
     }
 

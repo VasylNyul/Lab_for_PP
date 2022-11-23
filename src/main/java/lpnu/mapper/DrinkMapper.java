@@ -5,7 +5,7 @@ import lpnu.entity.Drink;
 
 public class DrinkMapper {
 
-    public static DrinkDTO toDTO(final Drink drink){
+    public static DrinkDTO toDTO(final Drink drink) {
         final DrinkDTO drinkDTO = new DrinkDTO();
 
 
@@ -17,7 +17,7 @@ public class DrinkMapper {
         return drinkDTO;
     }
 
-    public static Drink toEntity(final DrinkDTO drinkDTO){
+    public static Drink toEntity(final DrinkDTO drinkDTO) {
         final Drink drink = new Drink();
 
         drink.setId(drinkDTO.getId());

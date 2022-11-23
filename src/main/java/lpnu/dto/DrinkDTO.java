@@ -44,7 +44,7 @@ public class DrinkDTO {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(final Integer price) {
         this.price = price;
     }
 
@@ -52,7 +52,7 @@ public class DrinkDTO {
         return milliliters;
     }
 
-    public void setMilliliters(Integer milliliters) {
+    public void setMilliliters(final Integer milliliters) {
         this.milliliters = milliliters;
     }
 }
