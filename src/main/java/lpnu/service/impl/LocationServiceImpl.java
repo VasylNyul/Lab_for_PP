@@ -7,6 +7,7 @@ import lpnu.exception.ServiceException;
 import lpnu.mapper.LocationMapper;
 import lpnu.repository.LocationRepository;
 import lpnu.service.LocationService;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,10 @@ public class LocationServiceImpl implements LocationService {
 
     @Autowired
     private LocationRepository locationRepository;
+
+    public LocationServiceImpl(final LocationRepository locationRepository) {
+        this.locationRepository = locationRepository;
+    }
 
     @Override
     public List<LocationDTO> getAllLocations() {
@@ -36,7 +41,7 @@ public class LocationServiceImpl implements LocationService {
     @Override
     public LocationDTO create(final LocationDTO locationDTO) {
         final Location location = LocationMapper.toEntity(locationDTO);
-        location.setStatus(Status.ACTIVE);
+//        location.setStatus(Status.ACTIVE);
 
         locationRepository.save(location);
 
@@ -49,7 +54,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public LocationDTO update(final LocationDTO locationDTO) {
+    public LocationDTO update(final @NotNull LocationDTO locationDTO) {
         if (locationDTO.getId() == null) {
             throw new ServiceException(400, "id is null");
         }
@@ -64,6 +69,5 @@ public class LocationServiceImpl implements LocationService {
     @Override
     public void delete(final Long id) {
         locationRepository.delete(id);
-
     }
 }

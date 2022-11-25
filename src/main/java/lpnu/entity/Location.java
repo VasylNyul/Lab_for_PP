@@ -1,19 +1,17 @@
 package lpnu.entity;
 
-import lpnu.entity.enums.Address;
-import lpnu.entity.enums.City;
 import lpnu.entity.enums.Status;
 
 public class Location {
     private Long id;
-    private City city;
-    private Address address;
+    private String city;
+    private String address;
     private Status status;
 
     public Location() {
     }
 
-    public Location(final Long id, final City city, final Address address, final Status status) {
+    public Location(final Long id, final String city, final String address, final Status status) {
         this.id = id;
         this.city = city;
         this.address = address;
@@ -28,19 +26,19 @@ public class Location {
         this.id = id;
     }
 
-    public City getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(final City  city) {
+    public void setCity(final String  city) {
         this.city = city;
     }
 
-    public Address getAddress() {
-        return Address.valueOf(city, address.getCode());
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddress(final Address address) {
+    public void setAddress(final String address) {
         this.address = address;
     }
 

@@ -1,19 +1,21 @@
 package lpnu.dto;
 
-import lpnu.entity.enums.Address;
-import lpnu.entity.enums.City;
 import lpnu.entity.enums.Status;
+
+import javax.validation.constraints.NotNull;
 
 public class LocationDTO {
     private Long id;
-    private City city;
-    private Address address;
+    @NotNull
+    private  String city;
+    @NotNull
+    private String address;
     private Status status;
 
     public LocationDTO() {
     }
 
-    public LocationDTO(final Long id, final City city, final Address address, final Status status) {
+    public LocationDTO(final Long id, final String city, final String address, final Status status) {
         this.id = id;
         this.city = city;
         this.address = address;
@@ -28,19 +30,19 @@ public class LocationDTO {
         this.id = id;
     }
 
-    public City getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(final City city) {
+    public void setCity(final String city) {
         this.city = city;
     }
 
-    public Address getAddress() {
-        return Address.valueOf(city, address.getCode());
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddress(final Address address) {
+    public void setAddress(final String address) {
         this.address = address;
     }
 
