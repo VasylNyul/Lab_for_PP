@@ -10,6 +10,7 @@ public class UserMapper {
         userDTO.setId(user.getId());
         userDTO.setName(user.getName());
         userDTO.setEmail(user.getEmail());
+        userDTO.setCodeForAuth(user.getCodeForAuth());
         userDTO.setCoffeeBean(user.getCoffeeBean());
         userDTO.setStatus(user.getStatus());
 
@@ -22,6 +23,7 @@ public class UserMapper {
         user.setId(userDTO.getId());
         user.setName(userDTO.getName());
         user.setEmail(userDTO.getEmail());
+        user.setCodeForAuth(userDTO.getCodeForAuth());
         user.setCoffeeBean(userDTO.getCoffeeBean());
         user.setStatus(userDTO.getStatus());
 

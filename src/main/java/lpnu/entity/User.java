@@ -11,15 +11,17 @@ public class User {
     private Long id;
     private String name;
     private String email;
+    private String codeForAuth;
     private Status status;
     private int coffeeBean;
     public User() {
     }
 
-    public User(final Long id, final String name, final String email, final Status status, final int coffeeBean) {
+    public User(final Long id, final String name, final String email, final String codeForAuth, final Status status, final int coffeeBean) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.codeForAuth = codeForAuth;
         this.status = status;
         this.coffeeBean = coffeeBean;
     }
@@ -46,6 +48,14 @@ public class User {
 
     public void setEmail(final String email) {
         this.email = email;
+    }
+
+    public String getCodeForAuth() {
+        return codeForAuth;
+    }
+
+    public void setCodeForAuth(final String codeForAuth) {
+        this.codeForAuth = codeForAuth;
     }
 
     public Status getStatus() {

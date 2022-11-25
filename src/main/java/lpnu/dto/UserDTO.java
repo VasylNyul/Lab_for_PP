@@ -12,6 +12,7 @@ public class UserDTO {
     private String name;
     @Email
     private String email;
+    private String codeForAuth;
     private Status status;
     private int coffeeBean;
 
@@ -48,6 +49,14 @@ public class UserDTO {
 
     public void setEmail(final String email) {
         this.email = email;
+    }
+
+    public String getCodeForAuth() {
+        return codeForAuth;
+    }
+
+    public void setCodeForAuth(final String codeForAuth) {
+        this.codeForAuth = codeForAuth;
     }
 
     public Status getStatus() {

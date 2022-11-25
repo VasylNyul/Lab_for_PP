@@ -30,6 +30,7 @@ public class UserRepository {
         savedUser.setName(user.getName());
         savedUser.setEmail(user.getEmail());
         savedUser.setStatus(user.getStatus());
+        savedUser.setCodeForAuth(user.getCodeForAuth());
 
         return savedUser;
     }
@@ -45,5 +46,13 @@ public class UserRepository {
                 .filter(e -> e.getId().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ServiceException(400, "user with id " + id + " not found"));
+    }
+
+    public User findByAuthCode(final String code) {
+        return users.stream()
+                .filter(e -> e.getCodeForAuth().equals(code))
+                .findFirst()
+                .orElseThrow(() -> new ServiceException(400, "user with auth code " + code + " not found"));
+
     }
 }

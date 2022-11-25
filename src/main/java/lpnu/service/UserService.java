@@ -10,4 +10,6 @@ public interface UserService {
     UserDTO update(UserDTO userDTO);
 
     void delete(Long id);
+
+    boolean authUser(String code);
 }

@@ -15,13 +15,17 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
         </processorPath>
+        <module name="Lab_for_PP111" />
         <module name="study-spring-2022" />
         <module name="for_lab_5" />
+        <module name="." />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="." options="-parameters" />
+      <module name="Lab_for_PP111" options="-parameters" />
       <module name="for_lab_5" options="-parameters" />
       <module name="study-spring-2022" options="-parameters" />
     </option>
